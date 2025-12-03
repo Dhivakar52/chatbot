@@ -98,30 +98,13 @@ const CollegeExamInterface: React.FC = () => {
 
   return (
     <div
-      style={{
-        backgroundColor: '#dbeaff',
-        minHeight: '100vh',
-        padding: '40px 20px',
-      }}
+      
     >
       <div className="container-fluid">
         
-  <div>
- <Logo />
-          <CollegeSection
-            activeCollegeTab={activeCollegeTab}
-            setActiveCollegeTab={setActiveCollegeTab}
-            collegeTabs={collegeTabs}
-            collegeQuestionsData={collegeQuestionsData}
-            handleQuestionClick={handleQuestionClick}
-          />
-
-          
-
-        <BottomSection query={query} setQuery={setQuery} />
-  </div>
+  
         {/* Floating + button */}
-        {/* <div
+        <div
           onClick={() => setIsOpen(!isOpen)}
           style={{
             position: 'fixed',
@@ -143,10 +126,10 @@ const CollegeExamInterface: React.FC = () => {
           }}
         >
           {isOpen ? '×' : '+'}
-        </div> */}
+        </div>
 
         {/* Floating sliding card */}
-        {/* <div
+        <div
           style={{
             position: 'fixed',
             bottom: isOpen ? '100px' : '-600px',
@@ -156,7 +139,7 @@ const CollegeExamInterface: React.FC = () => {
             background: '#fff',
             borderRadius: '20px',
             boxShadow: '0 4px 30px rgba(0,0,0,0.2)',
-            padding: '15px',
+          
             overflowY: 'auto',
             transition: 'bottom 0.4s ease',
             zIndex: 9998,
@@ -176,10 +159,27 @@ const CollegeExamInterface: React.FC = () => {
   >
     ×
   </div>
+<div style={{
+        backgroundColor: '#dbeaff',
+        minHeight: '100vh',
+        padding: '40px 20px',
+      }}>
+ <Logo />
+          <CollegeSection
+            activeCollegeTab={activeCollegeTab}
+            setActiveCollegeTab={setActiveCollegeTab}
+            collegeTabs={collegeTabs}
+            collegeQuestionsData={collegeQuestionsData}
+            handleQuestionClick={handleQuestionClick}
+          />
 
+          
+
+        <BottomSection query={query} setQuery={setQuery} />
+  </div>
 
          
-        </div> */}
+        </div>
       </div>
     </div>
   );

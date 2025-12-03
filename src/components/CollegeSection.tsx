@@ -56,12 +56,16 @@ const CollegeSection: React.FC<Props> = ({
         <Nav
           variant="tabs"
           className="collegeTab"
-          style={{
-            backgroundColor: '#E4B316',
-            borderRadius: '30px',
-            flexWrap: 'wrap',
-            color: "#fff"
-          }}
+style={{
+  backgroundColor: '#E4B316',
+  borderRadius: '30px',
+  flexWrap: 'nowrap',
+  color: '#fff',
+  overflowX: 'visible',
+  overflowY: 'hidden',
+  scrollbarWidth: 'thin',  
+  msOverflowStyle: 'none', 
+}}
         >
           {collegeTabs.map((tab) => (
             <Nav.Item key={tab}>
